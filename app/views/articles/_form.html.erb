@@ -28,6 +28,9 @@
               <%= link_to 'Show', @article, class: 'btn btn-link' %>
             <% end %>
             <%= link_to 'Back', articles_path, class: 'btn btn-link' %>
+            <% if btn_delete ||= false %>
+              <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure to delete this post?' }, class: 'btn btn-link' %>
+            <% end %>
           </div>
         </div>
       <% end %>
