@@ -6,5 +6,6 @@
     </div>
   <% end %>
 
-  <%= render @article %>
+  <%= render partial: "article", :locals => { article: @article, btn_back: true } %>
+
 <div class="container">

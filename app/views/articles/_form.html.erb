@@ -15,16 +15,18 @@
         <% end %>
         <div class="card-block">
           <fieldset class="form-group">
-            <%= f.text_field :title, class: 'form-control article-edit-title' %>
+            <%= f.text_field :title, class: 'form-control article-edit-title', placeholder: 'Awesome blog title' %>
           </fieldset>
 
           <fieldset class="form-group">
-              <%= f.text_area :body, class: 'form-control', cols: 20, rows: 10 %>
+              <%= f.text_area :body, class: 'form-control', cols: 20, rows: 10, placeholder: 'Awesome content' %>
           </fieldset>
 
           <div class="actions">
-            <%= f.submit 'Update Article', class: 'btn btn-primary' %> 
-            <%= link_to 'Show', @article, class: 'btn btn-link' %>
+            <%= f.submit btn_submit_text ||= 'Update Article', class: 'btn btn-primary' %>
+            <% if btn_show ||= false %>
+              <%= link_to 'Show', @article, class: 'btn btn-link' %>
+            <% end %>
             <%= link_to 'Back', articles_path, class: 'btn btn-link' %>
           </div>
         </div>
