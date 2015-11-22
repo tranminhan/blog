@@ -7,13 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="blog-masthead">
+    <div class="container">
+      <nav class="blog-nav">
+        <a class="blog-nav-item active" href="#">Home</a>
+        <a class="blog-nav-item" href="/articles/5">About</a>
+        <%= link_to 'New Article', new_article_path , class: 'blog-nav-item' %>
+      </nav>
+    </div>
+  </div>
 
 <div class="container">
-  <h3>
-    My first Rails Application for CoderSchool! 
-    <%= link_to 'New Article', new_article_path , class: 'btn btn-link' %>
-  </h3>
-  
+
+  <div class="blog-header">
+        <h1 class="blog-title">My Blog</h1>
+        <p class="lead blog-description">an application for CoderSchool</p>
+  </div>
+
   <%= yield %>
 
 </div>
