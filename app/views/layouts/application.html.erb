@@ -14,14 +14,26 @@
         <a class="blog-nav-item" href="/articles/5">About</a>
         <%= link_to 'New Article', new_article_path , class: 'blog-nav-item' %>
       </nav>
+
+      <%= form_tag articles_path, :method => 'get' do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search" %>
+    <% end %>
+
     </div>
   </div>
 
 <div class="container">
 
+  
+
   <div class="blog-header">
         <h1 class="blog-title">My Blog</h1>
         <p class="lead blog-description">an application for CoderSchool</p>
+  </div>
+
+  <div class="container">
+    
   </div>
 
   <%= yield %>
