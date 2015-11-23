@@ -1,11 +1,7 @@
-<div class="container">
-  
-  <% if notice != nil %>
-    <div class="alert alert-info" role="alert">
-      <%= notice %>
-    </div>
-  <% end %>
+<% if notice != nil %>
+  <div class="alert alert-info" role="alert">
+    <%= notice %>
+  </div>
+<% end %>
 
-  <%= render partial: "article", :locals => { article: @article, btn_back: true } %>
-
-<div class="container">
+<%= render partial: "article", :locals => { article: @article, btn_back: true } %>
