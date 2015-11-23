@@ -38,11 +38,13 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The first time I deployed the app to heroku, I got some an error saying that Spring gem not found.
+I tried many suggestions from stackoverflow but no luck. 
+After a restart and re-create the app from scratch again, the issue disappeared (I still don't know why.)
 
 ## License
 
-    Copyright [2015] [An Tran]
+    Copyright 2015 - An Tran
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
